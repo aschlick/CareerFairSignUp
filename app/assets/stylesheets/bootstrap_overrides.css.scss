@@ -1,3 +1,8 @@
-.bs-header{
-  background_image: url(image_path('header.png'))
+body {
+  background-image: url(image_path('header.png'));
+  background-repeat:no-repeat;
+}
+
+.bs-header {
+  margin-top: 150px;
 }

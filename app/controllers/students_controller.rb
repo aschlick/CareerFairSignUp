@@ -44,6 +44,16 @@ class StudentsController < ApplicationController
     respond_with @student
   end
 
+  def random_winner
+    if Student.count == 0
+      flash[:error] = "No students entered"
+      redirect_to root_path
+    else
+      @student = Student.find(Random.rand(Student.count)+1)
+      redirect_to @student
+    end
+  end
+
 private
 
   def student_params
