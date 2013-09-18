@@ -1,7 +1,7 @@
 =content_for :page_header do
   %h1 Information
 
-=simple_form_for @student, defaults: {wrapper_html: {class: 'col-lg-6'}} do |form|
+=simple_form_for @student, defaults: {wrapper_html: {class: 'col-md-5'}} do |form|
 
   .inputs
     .row
@@ -18,7 +18,7 @@
         -Major.all.in_groups_of(3, false) do |majors|
           .row
             -majors.each do |m|
-              .col-sm-4
+              .col-sm-3
                 .checkbox
                   %label
                     =form.check_box :major_ids, {multiple: true, checked: @student.major_ids.include?(m.id) }, m.id, nil

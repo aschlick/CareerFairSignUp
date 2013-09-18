@@ -13,8 +13,12 @@
     .bs-header
       .container
         =yield(:page_header) || "CCI Systems, Inc."
-    .container.bs-docs-container
-      =yield
-    %footer.bs-footer{role: 'contentinfo'}
-      %center
-        %p &copy; 2012 CCI Systems, Inc.
+    .row
+      .col-md-2
+
+      .col-md-10
+        .container.bs-docs-container
+          =yield
+        %footer.bs-footer{role: 'contentinfo'}
+          %center
+            %p &copy; 2012 CCI Systems, Inc.
