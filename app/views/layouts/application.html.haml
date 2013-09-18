@@ -1,0 +1,20 @@
+!!! html
+%html
+  %head
+    %title CCI Systems, Inc.
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+
+    //topbar
+    // %header.navbar.navbar-inverse.navbar-fixed-top.bs-docs-nav
+    .bs-header
+      .container
+        =yield(:page_header) || "CCI Systems, Inc."
+    .container.bs-docs-container
+      =yield
+    %footer.bs-footer{role: 'contentinfo'}
+      %center
+        %p &copy; 2012 CCI Systems, Inc.
