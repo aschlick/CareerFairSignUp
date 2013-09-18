@@ -1,6 +1,13 @@
-body {
+header {
   background-image: url(image_path('header.png'));
   background-repeat:no-repeat;
+  background-color: transparent;
+  border-bottom-color: transparent;
+  height: 300px;
+}
+
+.navbar-fixed-top {
+  z-index: -1;
 }
 
 .bs-header {
