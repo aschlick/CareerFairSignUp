@@ -10,8 +10,8 @@
       =form.input :email, as: :email
       =form.input :email_confirmation, as: :email
     .row
-      =form.input :expected_graduation_year, collection: (Date.today.year..(Date.today+7.years).year)
       =form.input :expected_graduation_season, collection: ['Fall', 'Spring', 'Summer']
+      =form.input :expected_graduation_year, collection: (Date.today.year..(Date.today+7.years).year)
     .row
       .form-group
         %h5 Majors
