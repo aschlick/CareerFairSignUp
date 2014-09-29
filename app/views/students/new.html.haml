@@ -13,16 +13,9 @@
       =form.input :expected_graduation_season, collection: ['Fall', 'Spring', 'Summer']
       =form.input :expected_graduation_year, collection: (Date.today.year..(Date.today+7.years).year)
     .row
-      .form-group
-        %h5 Majors
-        -Major.all.in_groups_of(3, false) do |majors|
-          .row
-            -majors.each do |m|
-              .col-sm-3
-                .checkbox
-                  %label
-                    =form.check_box :major_ids, {multiple: true, checked: @student.major_ids.include?(m.id) }, m.id, nil
-                    =m.description
+      =form.input :major_1, collection: Major.all
+      =form.input :major_2, collection: Major.all
+
   .form-group
     =form.submit "Submit", class: 'btn btn-success'
     =link_to "Clear", root_path, class: 'btn btn-warning'

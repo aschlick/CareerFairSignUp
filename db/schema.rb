@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130917193835) do
+ActiveRecord::Schema.define(version: 20140929153013) do
 
   create_table "majors", force: true do |t|
     t.string   "name"
@@ -34,6 +34,9 @@ ActiveRecord::Schema.define(version: 20130917193835) do
     t.string   "expected_graduation_season"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "major_1_id"
+    t.integer  "major_2_id"
+    t.integer  "major_3_id"
   end
 
 end
