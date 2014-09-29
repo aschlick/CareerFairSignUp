@@ -4,7 +4,7 @@ gem 'rails', '4.0.0'
 
 gem 'bundler'
 
-gem 'sqlite3'
+gem 'pg'
 gem 'haml-rails'
 gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git'
 gem 'nested_form'
